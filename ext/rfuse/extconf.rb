@@ -10,7 +10,7 @@ have_func("rb_errinfo")
 
 have_func("rb_set_errinfo")
 
-if have_library('fuse')
+if have_library('fuse') || have_library('osxfuse')
   create_makefile('rfuse/rfuse')
 else
   puts "No FUSE install available"
